@@ -1,0 +1,23 @@
+class NotificationReaded{
+
+  static NotificationReaded _notificationReaded;
+  bool isNotificationReaded= false;
+
+  static NotificationReaded getInstance(){
+    if(_notificationReaded==null){
+      _notificationReaded= new NotificationReaded();
+    }
+    return _notificationReaded;
+  }
+
+  void clean(){
+    _notificationReaded=null;
+  }
+
+  bool get getNotificationReaded => isNotificationReaded;
+
+  set setNotificationReaded(bool value) {
+    isNotificationReaded = value;
+  }
+
+}
